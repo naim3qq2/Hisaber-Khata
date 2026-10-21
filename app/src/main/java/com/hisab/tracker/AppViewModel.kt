@@ -132,12 +132,12 @@ class AppViewModel(private val app: Application) : AndroidViewModel(app) {
         prefs.edit().putString("lang", if (isBn) "bn" else "en").apply()
     }
 
-    fun setTheme(t: String) {
+    fun changeTheme(t: String) {
         theme = t
         prefs.edit().putString("theme", t).apply()
     }
 
-    fun setSecure(v: Boolean) {
+    fun changeSecure(v: Boolean) {
         secure = v
         prefs.edit().putBoolean("secure", v).apply()
     }
