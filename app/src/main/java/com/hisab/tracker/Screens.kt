@@ -538,7 +538,7 @@ fun SettingsScreen(
             items = listOf("system", "light", "dark"),
             selected = { it == vm.theme },
             label = { Str.get("theme_$it", bn) },
-            onClick = { vm.setTheme(it) }
+            onClick = { vm.changeTheme(it) }
         )
 
         SectionTitle(tr("security"))
@@ -552,7 +552,7 @@ fun SettingsScreen(
         }
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(tr("secure_screen"), Modifier.weight(1f))
-            Switch(checked = vm.secure, onCheckedChange = { vm.setSecure(it) })
+            Switch(checked = vm.secure, onCheckedChange = { vm.changeSecure(it) })
         }
 
         SectionTitle(tr("data"))
